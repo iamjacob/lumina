@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #BF9684;
+    --secondary-bg-color: ##BF9684;
+    --Whiteish: #F2EBE1;
+    --CTA: #B45F57;
+    --footer:#403A37;
+    --secondary-color: #2ecc71;
+    --dark-font:#403A37;
+    --light-font:#F2EBE1;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+section.ikoner a{
+    text-decoration: none;
+}
+footer{
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-tekst{
+    display: flex;
+    justify-content: space-around;
+}
