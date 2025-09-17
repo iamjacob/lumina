@@ -32,6 +32,12 @@ src: url('../assets/fonts/millaris.ttf');
     --light-font:#F2EBE1;
 
 }
+
+h1{
+    color: #403A37;
+    font-family: 'rosaline';
+}
+
 h2{
     color: var(--light-font);
     font-family: 'Millaris', sans-serif;
@@ -60,21 +66,32 @@ section.ikoner a{
 /*styling nyhedsbrev*/
 .nyhedsbrev{
     display: flex;
-    gap: 1em;
+    position: relative;
 }
 
 #plante img{
     width: 100%;
     object-fit: contain;
-    z-index: -1;
+    z-index: 1;
+    display: block;
 }
 
 #tilmeld-dig-button{
     display: flex;
-    height: 80%;
-    width: 80%;
-    justify-content: center;
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    left: 38%;
+    top: 53%;
+    z-index: 2;
+    background-color: var(--bg-color);
+    color: var(--light-font);
+}
+
+#tilmed-h2{
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Styling af footer */
@@ -88,12 +105,7 @@ footer{
     justify-content: space-around;
     color: var(--light-font);
     font-family: 'Times New Roman', Times, serif;
-}
-
-/* Styling af links */
-a{
-    color: var(--light-font);
-    text-decoration: none;
+    gap: 20px;
 }
 
 /* footer list */
@@ -101,6 +113,35 @@ ul{
     list-style: none;
 }
 
+/* Styling af links */
+a{
+    color: var(--light-font);
+    text-decoration: none;
+}
+.find-os img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.find-os .trustpilot{
+    box-sizing: border-box;
+    width: 150px;
+    margin-top: 10px;
+}
+
+/* Styling af betalingsmuligheder */
+.betalingsmuligheder{
+    display: flex;
+    justify-content: center;
+}
+.betalingsmuligheder img{
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Styling af sociale medier */
 .social-logo{
     width: 120px;
     height: 120px;
@@ -119,4 +160,76 @@ ul{
     background-repeat: no-repeat;   
 }
 
+.brands{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+
+/*CARDS*/
+
+.card{
+    border:2px solid var(--CTA) ;
+    height: 400px;
+    width: 300px;
+    border-radius: 22px;
+    margin:4px;
+}
+
+.card .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.card .footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-top:2px solid var(--CTA) ;
+
+}
+
+.card .image img{
+    height: 150px;
+}
+
+.card .footer{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.colors{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.color{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Millaris', sans-serif;
+    color: var(--light-font);
+}
+
+.color:nth-child(1){
+    background-color: #403A37;
+}
+
+.color:nth-child(2){
+    background-color: #B45F57;
+}
+
+.color:nth-child(3){
+    background-color: #2ecc71;
+}
+.color:nth-child(4){
+    background-color: #F2EBE1;
+}
