@@ -325,6 +325,22 @@ a{
     align-items: center;
 }
 
+/*produkter*/
+.produkter{
+    height:800px;
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card:nth-child(2){
+    transform: translateY(-130px) scale(1.4);
+}
 
 
 
@@ -335,6 +351,8 @@ a{
     width: 300px;
     border-radius: 22px;
     margin:4px;
+    background-color: var(--secondary-bg-color);
+
 }
 
 .card .header{
