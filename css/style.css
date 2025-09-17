@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid red;
 }
 
 @font-face {
@@ -27,20 +28,36 @@ src: url('../assets/fonts/millaris.ttf');
     --Whiteish: #F2EBE1;
     --CTA: #B45F57;
     --footer:#403A37;
-    --secondary-color: #2ecc71;
+    --secondary-color: #858161;
     --dark-font:#403A37;
     --light-font:#F2EBE1;
-
+    
+    --produkt-farve-1: #92947E;
+    --produkt-farve-2: #EAE5E2;
+    --produkt-farve-3: #E7D0C8;
+    --produkt-farve-4: #DBD2E0;
 }
 
 h1{
-    color: #403A37;
+    color: var(--dark-font);
     font-family: 'rosaline';
+    display: flex;
+    align-items: center;
 }
 
 h2{
     color: var(--light-font);
     font-family: 'Millaris', sans-serif;
+}
+
+p{
+    font-family: 'Times New Roman', serif;
+}
+
+button{
+    outline: none;
+    border: none;
+    border-radius: 8px;
 }
 
 body{
@@ -58,10 +75,38 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    padding: 15px, 15px, 0px, 15px;
 }
+
+/* menu navigation*/
+.menu{
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    align-items: center;
+    padding: 20px;
+}
+#menu-billede{
+    display: flex;
+    justify-content: flex-start;
+    width: 20px;
+    height: 20px;
+}
+
 section.ikoner a{
     text-decoration: none;
 }
+
+section.ikoner{
+    padding: 20px;
+}
+/*hero sektion*/
+.hero-billede{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
 
 /*styling nyhedsbrev*/
 .nyhedsbrev{
@@ -76,22 +121,29 @@ section.ikoner a{
     display: block;
 }
 
+#højtaler{
+    position:absolute;
+    height: 465px;
+    right: -280px;
+    bottom: 5px;
+}
+
 #tilmeld-dig-button{
     display: flex;
-    height: 50px;
-    width: 100px;
     position: absolute;
     left: 38%;
-    top: 53%;
+    bottom: 98px;
     z-index: 2;
-    background-color: var(--bg-color);
+    background-color: var(--CTA);
     color: var(--light-font);
+    padding: 10px 40px;
+    letter-spacing: 2px;
+    
 }
 
 #tilmed-h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: var(--light-font);
+    font-family: 'Millaris', sans-serif;
 }
 
 /* Styling af footer */
@@ -99,18 +151,31 @@ footer{
     background-color: var(--footer);
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
+
+footer h2{
+    font-size: 20px;
+}
+    
 .footer-tekst{
     display: flex;
     justify-content: space-around;
     color: var(--light-font);
     font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
     gap: 20px;
+    padding: 0.5em 0em;
 }
 
 /* footer list */
 ul{
     list-style: none;
+}
+
+li{
+    display: flex;
+    padding:0.5em 0em;
 }
 
 /* Styling af links */
@@ -130,15 +195,25 @@ a{
     margin-top: 10px;
 }
 
+.copyright{
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--light-font);
+}
+
+
 /* Styling af betalingsmuligheder */
 .betalingsmuligheder{
     display: flex;
     justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
 .betalingsmuligheder img{
     width: 300px;
     height: auto;
-    margin: 20px 0;
+    margin: 4px 0;
 }
 
 /* Styling af sociale medier */
@@ -167,8 +242,9 @@ a{
 }
 
 
-/*CARDS*/
 
+
+/*CARDS*/
 .card{
     border:2px solid var(--CTA) ;
     height: 400px;
@@ -180,7 +256,8 @@ a{
 .card .header{
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    padding: 8px;
+    height: 60px;
 }
 
 .card .footer{
@@ -191,8 +268,21 @@ a{
 
 }
 
+.card .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+
 .card .image img{
-    height: 150px;
+    width: 250px;
 }
 
 .card .footer{
@@ -203,33 +293,30 @@ a{
 
 .colors{
     display: flex;
-    gap: 10px;
     margin: 10px 0;
+    gap:2px;
 }
 
 .color{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
-    border: 2px solid var(--dark-font);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid var(--dark-font);
     font-family: 'Millaris', sans-serif;
     color: var(--light-font);
 }
 
 .color:nth-child(1){
-    background-color: #403A37;
+    background-color: --var(--produkt-farve-1);
 }
 
 .color:nth-child(2){
-    background-color: #B45F57;
+    background-color: var(--produkt-farve-2);
 }
 
 .color:nth-child(3){
-    background-color: #2ecc71;
+    background-color: var(--produkt-farve-3);
 }
 .color:nth-child(4){
-    background-color: #F2EBE1;
+    background-color: var(--produkt-farve-4);
 }
