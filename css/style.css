@@ -35,6 +35,8 @@ header{
 section.ikoner a{
     text-decoration: none;
 }
+
+/* Styling af footer */
 footer{
     background-color: var(--footer);
     display: flex;
@@ -45,6 +47,9 @@ footer{
     justify-content: space-around;
     color: var(--light-font);
 }
+
+/* Styling af links */
 a{
     color: var(--light-font);
+    text-decoration: none;
 }
