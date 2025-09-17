@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
 @font-face {
@@ -89,7 +89,7 @@ header{
 #menu-billede{
     display: flex;
     justify-content: flex-start;
-    width: 20px;
+    width: 35px;
     height: 20px;
 }
 
@@ -100,13 +100,49 @@ section.ikoner a{
 section.ikoner{
     padding: 20px;
 }
+
 /*hero sektion*/
+section #hero-h2{
+    color: var(--CTA);
+}
+
+.hero-section{
+    display: flex;
+        width: 100%;
+    height: 400px;
+    
+}
 .hero-billede{
     position: relative;
+    width: 100%;
     top: 0;
     left: 0;
 }
 
+#billede-kvinde{
+    position: absolute;
+    z-index:2;
+    height: 300px;
+    width:50%;
+    outline: 1px solid red;
+}
+
+.button-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+}
+#hero-bg{
+    position: absolute;
+    z-index: 1;
+    height: 300px;
+    width: 200px;
+}
 
 /*styling nyhedsbrev*/
 .nyhedsbrev{
@@ -301,13 +337,13 @@ a{
     height: 20px;
     width: 20px;
     border-radius: 50%;
-    border: 1px solid var(--dark-font);
+    border: 1px solid #99999950;
     font-family: 'Millaris', sans-serif;
     color: var(--light-font);
 }
 
 .color:nth-child(1){
-    background-color: --var(--produkt-farve-1);
+    background-color: var(--produkt-farve-1);
 }
 
 .color:nth-child(2){
