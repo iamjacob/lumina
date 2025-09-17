@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+@font-face {
+font-family: 'Rosaline';
+src: url('../assets/fonts/rosaline.otf');
+}
+
+@font-face {
+font-family: 'Millaris';
+src: url('../assets/fonts/millaris.ttf');
+}
+
+/* @font-face {
+    font-family: 'MyFont';
+    src: url('path/to/MyFont.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
 :root{
     --bg-color: #BF9684;
     --secondary-bg-color: #F2EBE1;
@@ -14,6 +31,10 @@
     --dark-font:#403A37;
     --light-font:#F2EBE1;
 
+}
+h2{
+    color: var(--light-font);
+    font-family: 'Millaris', sans-serif;
 }
 
 body{
@@ -36,6 +57,26 @@ section.ikoner a{
     text-decoration: none;
 }
 
+/*styling nyhedsbrev*/
+.nyhedsbrev{
+    display: flex;
+    gap: 1em;
+}
+
+#plante img{
+    width: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+#tilmeld-dig-button{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Styling af footer */
 footer{
     background-color: var(--footer);
@@ -46,6 +87,7 @@ footer{
     display: flex;
     justify-content: space-around;
     color: var(--light-font);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Styling af links */
@@ -53,3 +95,28 @@ a{
     color: var(--light-font);
     text-decoration: none;
 }
+
+/* footer list */
+ul{
+    list-style: none;
+}
+
+.social-logo{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.brand1{
+    background: url('../img/logoer.png');
+    background-size: 100%;
+    background-position: 100px 100px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;   
+}
+
+
