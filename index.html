@@ -6,17 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lumina Audio</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="favicon">
 </head>
 
 <body>
     <div class="wrapper">
 
         <header>
-            <section class="menu">
-                <a href="#"> <img id="menu-billede" src="img/icons/menu_button.png" alt="menu-ikon"></a>
-                <p id="menu-tekst">Menu</p>
+            <section>
+                <label for="menu-bar" class="menu-label">
+                    <img id="menu-billede" src="img/icons/menu_button.png" alt="menu-ikon"></a>
+                    <p id="menu-tekst">Menu</p>
+                </label>
+
+                <input type="checkbox" id="menu-bar">
+
+                <aside>
+                    <label for="menu-bar">
+                    <img id="menu-billede" src="img/icons/menu_button.png" alt="menu-ikon"></a>
+                    <p id="menu-tekst">Menu</p>
+                </label>
+                    <ul>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#OmOs">Om Os</a></li>
+                        <li><a href="#FindOs">Find Os</a></li>
+                        <li><a href="#Anmeldelser">Se anmeldelser</a></li>
+                    </ul>
+                </aside>
+
+                
             </section>
+
             <h1>Lumina Audio</h1>
+
             <section class="ikoner">
                 <a href="#"><img src="img/icons/search.svg" alt="search"></a>
                 <a href="#"><img src="img/icons/user.svg" alt="bruger"></a>
@@ -60,7 +82,7 @@
             </section>
 
             <!-- 3. Produkter sektion JacobG -->
-            <section class="produkter">
+            <!-- <section class="produkter">
                 <h2>Find din helt egen Lumina</h2>
                 <div class="products">
                     <div class="card">
@@ -133,7 +155,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Nyhedsbrev MIRI -->
             <section class="nyhed-wrapper">
@@ -155,7 +177,7 @@
                 <!--kolonne 1-->
                 <div>
                     <h2>Lumina Audio ApS</h2>
-                    <p>
+                    <p class="luminaaudioaps">
                         Sønderhøj 30 <br>8260 Viby <br>CVR: 12345678 <br>
                     </p>
                     <a href="mailto:kontakt@luminaaudio.dk"><img src="./img/icons/mail.svg" alt="">
@@ -200,7 +222,7 @@
                 <!--kolonne 5-->
                 <div class="find-os">
                     <h2>Find os</h2>
-                    <div class="sociale medier">
+                    <div class="sociale-medier">
                         <img src="img/icons/social/facebook.png" alt="facebook">
                         <img src="img/icons/social/instagram.png" alt="instagram">
                         <img src="img/icons/social/tiktok.png" alt="tiktok">
