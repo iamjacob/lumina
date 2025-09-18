@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,13 +6,13 @@
 }
 
 @font-face {
-font-family: 'Rosaline';
-src: url('../assets/fonts/rosaline.otf');
+    font-family: 'Rosaline';
+    src: url('../assets/fonts/rosaline.otf');
 }
 
 @font-face {
-font-family: 'Millaris';
-src: url('../assets/fonts/millaris.ttf');
+    font-family: 'Millaris';
+    src: url('../assets/fonts/millaris.ttf');
 }
 
 /* @font-face {
@@ -22,29 +22,33 @@ src: url('../assets/fonts/millaris.ttf');
     font-style: normal;
 } */
 
-:root{
+:root {
     --bg-color: #E0CBB9;
     --secondary-bg-color: #F2EBE1;
     --Whiteish: #F2EBE1;
     --CTA: #B45F57;
-    --footer:#403A37;
+    --footer: #403A37;
     --secondary-color: #858161;
-    --dark-font:#403A37;
-    --light-font:#F2EBE1;
-    
+    --dark-font: #403A37;
+    --light-font: #F2EBE1;
+
     --produkt-farve-1: #92947E;
     --produkt-farve-2: #EAE5E2;
     --produkt-farve-3: #E7D0C8;
     --produkt-farve-4: #DBD2E0;
 }
 
+main{
+    margin-top: 70px;
+}
 
-#menu-bar{
+/*menu bar*/
+#menu-bar {
     display: none;
 }
 
 
-label{
+label {
     font-size: var(--font-size-large);
     color: var(--secondary-color);
     cursor: pointer;
@@ -55,11 +59,11 @@ label{
     gap: 10px;
 }
 
-#menu-bar:checked ~ aside{
-    transform: translateX(0); 
+#menu-bar:checked~aside {
+    transform: translateX(0);
 }
 
-aside{
+aside {
     height: 100vh;
     width: 250px;
     background-color: var(--bg-color);
@@ -71,55 +75,91 @@ aside{
     transition: transform 0.3s ease;
 }
 
-#menu-bar{
+#menu-bar {
     /* display: none; */
 }
 
-h1{
+a.menu-liste {
+    color: var(--dark-font);
+}
+
+/*generel styling*/
+h1 {
     color: var(--dark-font);
     font-family: 'rosaline';
     display: flex;
     align-items: center;
-    font-size: 56px;
+    font-size: 46px;
 }
 
-h2{
+h2 {
     color: var(--light-font);
     font-family: 'Millaris', sans-serif;
 }
 
-p{
+p {
     font-family: 'Times New Roman', serif;
 }
 
-button{
+button {
     outline: none;
     border: none;
     border-radius: 8px;
 }
 
-body{
+h1, button{
+    cursor: url("../img/icons/lumina_star.png"), auto;
+}
+
+body {
     background: var(--bg-color);
     color: var(--dark-font);
     display: flex;
     justify-content: center;
 }
 
-.wrapper{
-    width:90%;
+.wrapper {
+    width: 90%;
     background-color: var(--secondary-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-header{
+/*header*/
+
+header {
+    z-index: 1000;
+    background: var(--secondary-bg-color);
+    position: fixed;
+    width: calc(90% - 1px);
+    top: 0px;
+    right: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 35px;
-    height: 100px;
+    height: 70px;
 }
 
+/*logo og titel*/
+.hoved-titel{
+    display: flex;
+    gap: 1em;
+    position: relative;
+}
+ 
+#logo{
+    position: absolute;
+    top:10%;
+    left:90%;
+    height: 30%;
+    width: 30%;
+    object-fit: contain;
+}
 /* menu navigation*/
-.menu{
+.menu {
     display: flex;
     gap: 10px;
     justify-content: left;
@@ -127,74 +167,73 @@ header{
     padding: 20px;
 }
 
-#menu-billede{
+#menu-billede {
     display: flex;
     justify-content: flex-start;
     width: 35px;
     height: 20px;
 }
 
-section.ikoner a{
+section.ikoner a {
     text-decoration: none;
 }
 
-section.ikoner{
+section.ikoner {
     display: flex;
     gap: 8px;
     padding: 20px;
 }
 
-.ikoner a img{
+.ikoner a img {
     width: 35px;
     height: 35px;
 }
 
 /*hero sektion*/
-section #hero-h2{
+section #hero-h2 {
     color: var(--CTA);
 }
 
-.hero-section{
+.hero-section {
     display: flex;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 70px);
     overflow: hidden;
-    
 }
 
-.hero-billede{
+.hero-billede {
     position: relative;
     width: 50%;
     top: 0;
     left: 0;
-    margin:16px;
+    margin: 16px;
 }
 
-#billede-kvinde{
+#billede-kvinde {
     position: absolute;
-    z-index:2;
+    z-index: 2;
     top: 10%;
     right: 15%;
-    width:90%;
-    height:90%;
+    width: 90%;
+    height: 90%;
     object-fit: contain;
     transform: rotateY(180deg);
 
     /* outline: 1px solid red; */
 }
 
-#hero-bg{
+#hero-bg {
     position: absolute;
     z-index: 1;
-    height:90%;
+    height: 90%;
     width: 70%;
     left: 10%;
-    top:5%;
+    top: 5%;
     object-fit: contain;
 
 }
 
-.tekst-hero{
+.tekst-hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,93 +243,313 @@ section #hero-h2{
     text-align: left;
     padding: 20px;
 }
-.h-txt{
+
+.h-txt {
     padding-left: 10px;
 }
 
-.button-hero{
-display: flex;
-justify-content: center;
-align-items: center;
-gap:10px;
-letter-spacing: 2px;
+.button-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 2px;
 }
 
-#køb-nu-button{
+#køb-nu-button {
     background-color: var(--secondary-color);
     padding: 10px 40px;
+    
 }
 
-#udforsk-button{
+#udforsk-button {
     background-color: var(--secondary-bg-color);
-    border:solid 3px var(--secondary-color);
+    border: solid 3px var(--secondary-color);
     padding: 8px 35px;
 }
 
-#udforsk-h2{
+#udforsk-h2 {
     color: var(--secondary-color);
     border-radius: 8px;
 }
 
 /*styling nyhedsbrev*/
-.nyhed-wrapper{
+.nyhed-wrapper {
     overflow: hidden;
 }
 
-.nyhedsbrev{
+.nyhed-wrapper {
     display: flex;
     position: relative;
+    top: 0;
+    left: 0;
 }
 
-#plante img{
-    width: 100%;
-    object-fit: contain;
-    z-index: 1;
-    display: block;
+#kaktus{
+width: 100%;
+object-fit: contain;
+ transform: rotateY(180deg);
+ display:block;
 }
 
-#højtaler{
-    position:absolute;
-    height: 465px;
-    right: -280px;
-    bottom: 5px;
-}
 
-#tilmeld-dig-button{
+#tilmeld-dig-button {
     display: flex;
     position: absolute;
-    left: 38%;
-    bottom: 98px;
+    left: 55%;
+    bottom: 65%;
     z-index: 2;
     background-color: var(--CTA);
     color: var(--light-font);
     padding: 10px 40px;
     letter-spacing: 2px;
-    
+
 }
 
-#tilmed-h2{
+#tilmed-h2 {
     color: var(--light-font);
     font-family: 'Millaris', sans-serif;
 }
 
+
+/*produkter*/
+
+.brand1 {
+    background: url('../img/logoer.png');
+    background-size: 100%;
+    background-position: 100px 100px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.brands a img {
+    display: block;
+    height: 40px;
+    width: auto;
+}
+
+/*produkter*/
+.produkter {
+    height: fit-content;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card:nth-child(2) {
+    /* transform: translateY(-130px) scale(1); */
+}
+
+
+
+/*CARDS*/
+.card {
+    border: 2px solid var(--CTA);
+    height: 400px;
+    width: 300px;
+    border-radius: 22px;
+    margin: 4px;
+    background-color: var(--secondary-bg-color);
+
+}
+
+.card .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    height: 60px;
+}
+
+.card .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-top: 2px solid var(--CTA);
+
+}
+
+.card .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+
+.card .image img {
+    width: 250px;
+}
+
+.card .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.colors {
+    display: flex;
+    margin: 10px 0;
+    gap: 2px;
+}
+
+.color {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #99999950;
+    font-family: 'Millaris', sans-serif;
+    color: var(--light-font);
+}
+
+.color:nth-child(1) {
+    background-color: var(--produkt-farve-1);
+}
+
+.color:nth-child(2) {
+    background-color: var(--produkt-farve-2);
+}
+
+.color:nth-child(3) {
+    background-color: var(--produkt-farve-3);
+}
+
+.color:nth-child(4) {
+    background-color: var(--produkt-farve-4);
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 4px;
+    }
+
+    .ikoner a img {
+        height: 22px;
+        width: 22px;
+    }
+
+    #menu-tekst {
+        display: none;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        height: calc(100vh - 100px);
+    }
+
+    .hero-billede,
+    .tekst-hero {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-billede {
+        margin: 0;
+    }
+
+
+    .brands {
+        width: (100vw -10%);
+        padding: 10px 0px;
+
+    }
+
+    .brands a img {
+        width: auto;
+        height: 22px;
+        padding: 0 3px;
+    }
+
+
+    section.hero-section #hero-bg {
+        position: absolute;
+        z-index: 1;
+        height: 98%;
+        width: 80%;
+        left: 22%;
+        top: 7%;
+        object-fit: contain;
+    }
+
+    section.hero-section #billede-kvinde {
+        position: relative;
+        width: 70%;
+        height: auto;
+        top: 0;
+        right: 0;
+        transform: rotateY(180deg);
+        margin: 0 auto;
+    }
+
+    #udforsk-button {
+        background-color: var(--secondary-bg-color);
+        border: solid 3px var(--secondary-color);
+        padding: 8px 30px;
+    }
+
+    #køb-nu-button {
+        background-color: var(--secondary-color);
+        padding: 11px 30px;
+    }
+
+
+
+
+    /* produkter */
+    .card:nth-child(2) {
+    transform: none;
+}
+
+    /* .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    } */
+}
+
+
 /* Styling af footer */
-footer{
+footer {
     background-color: var(--footer);
     display: flex;
     flex-direction: column;
     padding: 20px;
+    width: 100%;
 }
 
-footer h2{
+footer h2 {
     font-size: 20px;
 }
 
-p.luminaaudioaps {
-padding: 7px 0px 9px 0px;
-}
-    
-.footer-tekst{
+
+.footer-tekst {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -302,34 +561,40 @@ padding: 7px 0px 9px 0px;
 }
 
 /* footer list */
-ul{
+ul {
     list-style: none;
 }
 
-li{
+aside ul li {
     display: flex;
-    padding:0.5em 0em;
+    padding: 0.5em 0em 0.5em 1em;
+}
+
+a.footer-liste {
+    color: var(--light-font);
+    display: block;
+    padding: 4px 0px;
+    
 }
 
 /* Styling af links */
-a{
-    color: var(--light-font);
+a {
     text-decoration: none;
 }
 
-.find-os img{
+.find-os img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 
-.find-os .trustpilot{
+.find-os .trustpilot {
     box-sizing: border-box;
     width: 150px;
     margin-top: 10px;
 }
 
-.copyright{
+.copyright {
     text-align: center;
     font-size: 10px;
     font-family: 'Times New Roman', Times, serif;
@@ -338,219 +603,32 @@ a{
 
 
 /* Styling af betalingsmuligheder */
-.betalingsmuligheder{
+.betalingsmuligheder {
     display: flex;
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 10px;
 }
 
-.betalingsmuligheder img{
+.betalingsmuligheder img {
     width: 300px;
     height: auto;
     margin: 4px 0;
 }
 
 /* Styling af sociale medier */
-.social-logo{
+.social-logo {
     width: 120px;
     height: 120px;
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.luminaaudioaps {
+    padding: 0px 0px 15px 0px;
+}
+
 .sociale-medier {
-        padding: 4px 0px 0px 0px;
-}
-
-.brand1{
-    background: url('../img/logoer.png');
-    background-size: 100%;
-    background-position: 100px 100px;
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    background-size: contain;
-    background-repeat: no-repeat;   
-}
-
-.brands{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/*produkter*/
-.produkter{
-    height:800px;
-}
-
-.products{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 20px;
-}
-
-.card:nth-child(2){
-    transform: translateY(-130px) scale(1.4);
-}
-
-
-
-/*CARDS*/
-.card{
-    border:2px solid var(--CTA) ;
-    height: 400px;
-    width: 300px;
-    border-radius: 22px;
-    margin:4px;
-    background-color: var(--secondary-bg-color);
-
-}
-
-.card .header{
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-    height: 60px;
-}
-
-.card .footer{
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-    border-top:2px solid var(--CTA) ;
-
-}
-
-.card .top{
-    display: flex;
-    justify-content: space-between;
-}
-
-.card .image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    width: 100%;
-}
-
-.card .image img{
-    width: 250px;
-}
-
-.card .footer{
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-}
-
-.colors{
-    display: flex;
-    margin: 10px 0;
-    gap:2px;
-}
-
-.color{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: 1px solid #99999950;
-    font-family: 'Millaris', sans-serif;
-    color: var(--light-font);
-}
-
-.color:nth-child(1){
-    background-color: var(--produkt-farve-1);
-}
-
-.color:nth-child(2){
-    background-color: var(--produkt-farve-2);
-}
-
-.color:nth-child(3){
-    background-color: var(--produkt-farve-3);
-}
-.color:nth-child(4){
-    background-color: var(--produkt-farve-4);
-}
-
-/* Media query for mobile */
-@media (max-width: 768px) {
-    h1{
-    font-size: 16px;
-}
-
-header{
-    padding:4px;
-}
-
-.ikoner a img{
-    height: 22px;
-    width: 22px;
-}
-
-#menu-tekst{
-    display: none;
-}
-
-.hero-section{
-    flex-direction:column-reverse;
-    height: calc(100vh - 100px);
-}
-
-    .hero-billede, .tekst-hero{
-        width: 100%;
-        text-align: center;
-    }
-    .hero-billede{
-        margin:0;
-    }
-
-
-    .brands{
-    width: (100vw -10%);
-    padding:10px 0px;
-
-    }
-
-    .brands a img{
-        width: auto;
-        height: 22px;
-        padding: 0 3px;
-    }
-
-
-    section.hero-section #hero-bg{
-    position: absolute;
-    z-index: 1;
-    height: 98%;
-    width: 70%;
-    left: 22%;
-    top: -6%;
-    object-fit: contain;
-    }
-
-    section.hero-section #billede-kvinde {
-        position: relative;
-        width: 60%;
-        height: auto;
-        top: 0;
-        right: 0;
-        transform: rotateY(180deg);
-        margin: 0 auto;
-    }   
-
-    /* .card {
-        width: 100%;
-        height: auto;
-    }
-
-    .products {
-        flex-direction: column;
-        align-items: center;
-    } */
+    padding: 4px 0px 0px 0px;
 }
