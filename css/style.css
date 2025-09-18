@@ -157,7 +157,7 @@ section #hero-h2{
 .hero-section{
     display: flex;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 100px);
     overflow: hidden;
     
 }
@@ -497,7 +497,54 @@ header{
     display: none;
 }
 
-    .card {
+.hero-section{
+    flex-direction:column-reverse;
+    height: calc(100vh - 100px);
+}
+
+    .hero-billede, .tekst-hero{
+        width: 100%;
+        text-align: center;
+    }
+    .hero-billede{
+        margin:0;
+    }
+
+
+    .brands{
+    width: (100vw -10%);
+    padding:10px 0px;
+
+    }
+
+    .brands a img{
+        width: auto;
+        height: 22px;
+        padding: 0 3px;
+    }
+
+
+    section.hero-section #hero-bg{
+    position: absolute;
+    z-index: 1;
+    height: 98%;
+    width: 70%;
+    left: 22%;
+    top: -6%;
+    object-fit: contain;
+    }
+
+    section.hero-section #billede-kvinde {
+        position: relative;
+        width: 60%;
+        height: auto;
+        top: 0;
+        right: 0;
+        transform: rotateY(180deg);
+        margin: 0 auto;
+    }   
+
+    /* .card {
         width: 100%;
         height: auto;
     }
@@ -505,5 +552,5 @@ header{
     .products {
         flex-direction: column;
         align-items: center;
-    }
+    } */
 }
