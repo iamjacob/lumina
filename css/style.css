@@ -92,7 +92,7 @@ h1 {
     font-size: 46px;
 }
 
-h2 {
+h2, .h2 {
     color: var(--light-font);
     font-family: 'Millaris', sans-serif;
 }
@@ -167,18 +167,18 @@ header {
     padding: 20px;
 }
 
-#menu-billede {
+.menu-billede {
     display: flex;
     justify-content: flex-start;
     width: 35px;
     height: 20px;
 }
 
-section.ikoner a {
+div.ikoner a {
     text-decoration: none;
 }
 
-section.ikoner {
+div.ikoner {
     display: flex;
     gap: 8px;
     padding: 20px;
@@ -189,8 +189,12 @@ section.ikoner {
     height: 35px;
 }
 
+/* .hero-div{
+    display: flex;
+} */
+
 /*hero sektion*/
-section #hero-h2 {
+div #hero-h2 {
     color: var(--CTA);
 }
 
@@ -242,6 +246,7 @@ section #hero-h2 {
     width: 50%;
     text-align: left;
     padding: 20px;
+    /* margin: 20px 0px; */
 }
 
 .h-txt {
@@ -267,6 +272,8 @@ section #hero-h2 {
     border: solid 3px var(--secondary-color);
     padding: 8px 35px;
 }
+
+
 
 #udforsk-h2 {
     color: var(--secondary-color);
@@ -464,7 +471,7 @@ object-fit: contain;
         width: 22px;
     }
 
-    #menu-tekst {
+    .menu-tekst {
         display: none;
     }
 
@@ -497,7 +504,7 @@ object-fit: contain;
     }
 
 
-    section.hero-section #hero-bg {
+    div.hero-section #hero-bg {
         position: absolute;
         z-index: 1;
         height: 98%;
@@ -507,7 +514,7 @@ object-fit: contain;
         object-fit: contain;
     }
 
-    section.hero-section #billede-kvinde {
+    div.hero-section #billede-kvinde {
         position: relative;
         width: 70%;
         height: auto;
@@ -546,6 +553,9 @@ object-fit: contain;
         align-items: center;
     } */
 }
+
+
+
 
 
 /* Styling af footer */
