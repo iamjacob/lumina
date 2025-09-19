@@ -470,7 +470,7 @@ object-fit: contain;
 
     .hero-section {
         flex-direction: column-reverse;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 70px);
     }
 
     .hero-billede,
